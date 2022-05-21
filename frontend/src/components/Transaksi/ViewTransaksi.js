@@ -68,7 +68,7 @@ const ViewTransaksi = () => {
     let Transaksi = res.data;
     setId(Transaksi.id);
     setNama(Transaksi.nama);
-    setTanggal(Transaksi.tanggal);
+    setTanggal(Transaksi.tgl);
     setProduk(Transaksi.produk);
     setHarga(Transaksi.harga);
     setQty(Transaksi.qty);
@@ -123,6 +123,9 @@ const ViewTransaksi = () => {
                 </div>
                 <div className="form-group">
                   <label>Qty : {qty}</label>
+                </div>
+                <div className="form-group">
+                  <label>Total : {qty*harga}</label>
                 </div>
                 <br></br>
                 <button className="btn btn-danger" onClick={cancel}>

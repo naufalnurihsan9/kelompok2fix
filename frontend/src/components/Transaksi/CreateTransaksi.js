@@ -206,14 +206,14 @@ const CreateTransaksi = () => {
                 </select>
               </div>
               <div className="form-group">
-                <label>Harga </label>
+                <label>Harga</label>
                 <input
                   placeholder="Harga"
                   name="harga"
-                  type="text"
-                  className="input"
+                  type="number"
+                  className="form-control"
                   value={harga}
-                  onChange={(e) => setHarga(e.state.value)}
+                  onChange={(e) => setHarga(e.target.value)}
                 />
               </div>
               <div className="form-group">
