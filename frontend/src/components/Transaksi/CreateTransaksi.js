@@ -197,8 +197,8 @@ const CreateTransaksi = () => {
                   className="input"
                   name="produks"
                   id="produks"
-                  onChange={(e) => setNama(e.target.value)}
-                  defaultValue={nama}
+                  onChange={(e) => setProduk(e.target.value)}
+                  defaultValue={produk}
                 >
                   {produks.map((produk) => (
                     <option key={produk.id}>{produk.nama}</option>
