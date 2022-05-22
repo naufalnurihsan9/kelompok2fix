@@ -125,7 +125,7 @@ const ViewTransaksi = () => {
                   <label>Qty : {qty}</label>
                 </div>
                 <div className="form-group">
-                  <label>Total : {qty*harga}</label>
+                  <label>Total : Rp. {numberWithCommas(qty * harga)} </label>
                 </div>
                 <br></br>
                 <button className="btn btn-danger" onClick={cancel}>

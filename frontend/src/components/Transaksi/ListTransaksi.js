@@ -104,6 +104,10 @@ const ListTransaksi = () => {
     }
   };
 
+  function numberWithCommas(harga) {
+    return harga.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ".");
+  }
+
   const columns = [
     {
       name: "Id",
@@ -131,7 +135,7 @@ const ListTransaksi = () => {
     },
     {
       name: "Harga",
-      selector: (row) => row.harga,
+      selector: (row) => "Rp. " + numberWithCommas(row.harga),
       width: "100px",
       sortable: true,
     },
@@ -143,7 +147,7 @@ const ListTransaksi = () => {
     },
     {
       name: "Total",
-      selector: (row) => row.qty * row.harga,
+      selector: (row) => "Rp. " + numberWithCommas(row.qty * row.harga),
       width: "100px",
       sortable: true,
     },
